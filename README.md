@@ -1,42 +1,17 @@
-# assegnamento1
-Module: advanced Python
-Assignment #1 (October 21, 2019)
-
-
-Clean up your ProbabilityDensityFunction class and create a fully-fledged
-Python package.
+Module: basic Python
+Assignment #2 (Set 30, 2021)
 
 --- Goal
-
-Create a splrand Python package to generate univariate random numbers according
-to a given distribution using splines.
-
-The layout of the package should be (hopefully the names should be
-self-explaining):
-
-splrand
---- splrand/splrand
------- splrand/splrand/__init__.py
------- splrand/splrand/core.py
------- splrand/splrand/version.py
---- splrand/docs
------- splrand/docs/Makefile
------- splrand/docs/api.rst
------- splrand/docs/conf.py
------- splrand/docs/index.rst
------- splrand/docs/make.bat
------- splrand/docs/release_notes.rst
---- splrand/tests
------- splrand/tests/test_core.py
---- .travis.yml
---- LICENSE
---- README.md
---- requirements.txt
-
+Write a program to explore the properties of a few elementary Particles.
+The program must contain a Base class Particle and two Child classes, Proton and Alpha, that inherit from it.
 
 --- Specifications
-- the package should have adequate unit tests
-- the package should have continuus integration
-- the package should have adequate documentation
-- the documentation should be on readthedocs
-- [optional] add a rudimentary release manager to automate the tagging process
+- instances of the class Particle must be initialized with their mass, charge, and name
+- the class constructor must also accept (optionally) and store one and only one of the following quantities: energy, momentum, beta or gamma
+- whatever the choice, the user should be able to read and set any of the
+  above mentioned quantities using just the '.' (dot) operator e.g.
+  print(my_particle.energy), my_particle.beta = 0.5
+- attempts to set non physical values should be rejected
+- the Particle class must have a method to print the Particle information in
+  a formatted way
+- the child classes Alpha and Protons must use class attributes to store their mass, charge and name
